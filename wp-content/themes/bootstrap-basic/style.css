@@ -165,7 +165,12 @@ article, aside, .widget{border-color: #23d160}
 	border: 1px solid #23d160;
 }
 
+.nav-item{padding: 0px 10px}
+
 /* Css Content */
+
+#main-column .post, #main-column .page{border: 1px solid #23d160;}
+
 #content{
 	padding: 20px 0px;
 }
