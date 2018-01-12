@@ -2,7 +2,7 @@
 /** 
  * The theme footer.
  * 
- * @package bootstrap-basic4
+ * @package bootstrap-basic4.1
  */
 ?>
             </div><!--.site-content-->
