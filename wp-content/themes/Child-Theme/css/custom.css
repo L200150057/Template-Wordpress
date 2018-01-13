@@ -1,0 +1,40 @@
+/* Syntax */
+
+/* Menambah Font */
+@font-face {
+    src: url(../font/RobotoSlab-Bold.ttf);
+}
+
+body{background-color: grey;}
+div{font-family: 'Roboto', sans-serif}
+ul {list-style-type: none;margin: 0;padding: 0;}
+li{display: block; float: left;padding-right:10px}
+textarea{width: 100%}
+/*div{border: solid 1px black;}*/
+
+/* Class */
+.active{padding-right: 20px; color: #fff}
+.active:hover{color: white}
+.author{color: #bdbdbd;display: block;font-size: 12px;font-weight: 400;line-height: 1.3em;margin: 0!important;padding: 0;}
+.blog-header{padding: 5px}
+.bg-dark{color: white}
+.container{background-color: white;}
+.card{border-radius: 2px}
+.judul-posting{line-height: 1.3em;font-size: 17px;font-weight: 700;}
+.judul-posting a{color: black}
+.judul-comment{padding: 0px 20px}
+.nav-link{padding-right: .5rem;padding-left: .5rem;}
+.the_excerpt{display: block;margin-bottom: 8px;font-size: 13px;line-height: 22px;text-align: justify;color: black}
+.row{padding: 5px 0px}
+
+
+/* ID */
+input{width: 100%}
+#gambar-post img{width: 100%;height: 150px;display: block;transition: all .3s ease-out!important;-webkit-transition: all .3s ease-out!important;-moz-transition: all .3s ease-out!important;-o-transition: all .3s ease-out!important;}
+#main{height: 100%}
+#post-utama, #sidebar{padding: 10px}
+#read-more:hover{background-color: blue}
+#read-more{border-radius: 0px;font-size: 13px;background-color: black;border:0px;}
+#row-post{padding-top: 15px}
+#row-single{padding-top: 15px}
+#single-main{padding: 5px}
