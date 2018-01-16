@@ -1,27 +1,84 @@
 /* Syntax */
 
+
 /* Menambah Font */
-@font-face {
-    src: url(../font/RobotoSlab-Bold.ttf);
+@font-face {src: url(../font/RobotoSlab-Bold.ttf);
 }
 
-body{background-color: grey;}
+
+/* Navbar Header */
+.topnav {background-color: black;overflow: hidden;}
+.topnav a{float: left;display: block;color: #f2f2f2;text-align: center;padding: 14px 16px;text-decoration: none;font-size: 15px;font-weight: bold;}
+.topnav a:hover {background-color: #5EC662;color: white;transition: background-color 300ms ease-out}
+.active {background-color: #5EC662;color: white;}
+.blog-header{position: relative;width: 100%;height: 200px;overflow: hidden;}
+.blog-header img{position: absolute;left: 50%;top: 50%;width: auto;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+.topnav .icon {display: none;}
+#banner{margin: 5px 0px}
+#header-row{padding: 0px 15px}
+
+
+/* Main Post Single.php */
+.author{color: #999;display: block;font-size: 12px;font-weight: 400;line-height: 1.3em;margin: 0!important;padding: 0;}
+.aligncenter{display: block;margin-left: auto;margin-right: auto}
+.alignleft{float: left;padding: 10px}
+.alignright{float: right;padding: 10px}
+.info-post-single{margin-bottom: 20px;border-bottom: 1px solid rgb(0,0,0,.125);padding: 10px 10px 26px 10px}
+.judul-post-single{font-weight: bold;font-size: 23px;padding-bottom: 20px;border-bottom:1px solid rgb(0,0,0,.125);}
+
+/* Sidebar & Wiget */
+.header-widget{font-size: 21px;font-weight: bold;}
+.btn-success{background-color: #5EC662;border-color: #5EC662;color: white;font-weight: 700;border-width: 2px}
+.btn-success:hover{color: #fff;background-color: #2DBC32;border-color: #2DBC32;}
+.sidebar-module{padding: 0px 20px;margin-bottom: 45px}
+#sidebar{padding: 0px 10px;border:0px;}
+#searchsubmit{margin: 10px 0px}
+
+/* Home Post */
+#gambar-post{position: relative;overflow: hidden;width: 340px;padding: 0;margin: 0px 15px}
+#gambar-post img{max-width: 100%;-moz-transition: all 0.3s;-webkit-transition: all 0.3s;transition: all 0.3s;}
+#gambar-post img:hover{-moz-transform: scale(1.5) rotate(15deg);-webkit-transform: scale(1.5) rotate(15deg);transform: scale(1.5) rotate(15deg);}
+.info-post-home li{display: block; float: left;padding-right:10px}
+
+/* Comment */
+.avatar_comment img{float: left;margin-top: 7px}
+.comment-body ul{padding-left: 50px}
+.comment-body #author{font-size: 15px}
+.comment-body #date{color: #999;font-size: 12px}
+.comment-body ul p{margin: 20px 0px;}
+
+/* Share Button */
+#judul-share{font-weight: bold;}
+#share{margin-top: 25px}
+button{cursor:pointer;background:none;border:none;border: 2px solid #5ec662;padding:10px 20px;font-weight:700;color: #5ec662;border-radius:3px;text-transform:uppercase;bottom:20px;}
+button:hover{background:#5ec662;color:white;}
+.wrap{text-align:center;}
+
+/* Footer & widget */
+.widget_categories ul li{float: left;padding-right: 10px}
+.widgettitle{font-weight: bold;font-size: 20px;border-bottom: 1px solid rgba(0,0,0,0.125);padding: 10px 0px}
+#container-footer{border-top: 1px rgba(0,0,0,.125) solid;}
+#menu-menu-1 li{border-bottom: 1px solid rgba(0,0,0,0.125);margin-bottom: 10px;}
+#navigation-footer-row{padding:0px 15px; margin-top: 35px}
+#navigation-footer-row .col-sm-4{min-height: 250px;padding: 0px 30px}
+.widget_categories ul{margin-top: 15px}
+.widget_categories ul li a{background-color: white;padding: 5px;border-radius: 5px;color: #5ec662;border:2px solid #5ec662;}
+.widget_categories ul li a:hover{color: white;background-color: #5ec662}
+
+/* Syntax */
 div{font-family: 'Roboto', sans-serif}
-ul {list-style-type: none;margin: 0;padding: 0;}
-li{display: block; float: left;padding-right:10px}
+ul, li{list-style-type: none;margin: 0;padding: 0;}
+li a{font-weight: bold;color: #5EC662}
 textarea{width: 100%}
-/*div{border: solid 1px black;}*/
 
 /* Class */
 .active{padding-right: 20px; color: #fff}
 .active:hover{color: white}
-.author{color: #bdbdbd;display: block;font-size: 12px;font-weight: 400;line-height: 1.3em;margin: 0!important;padding: 0;}
 .blog-header{padding: 5px}
 .bg-dark{color: white}
 .container{background-color: white;}
 .card{border-radius: 2px}
 .judul-posting{line-height: 1.3em;font-size: 17px;font-weight: 700;}
-.judul-posting a{color: black}
 .judul-comment{padding: 0px 20px}
 .nav-link{padding-right: .5rem;padding-left: .5rem;}
 .the_excerpt{display: block;margin-bottom: 8px;font-size: 13px;line-height: 22px;text-align: justify;color: black}
@@ -32,9 +89,17 @@ textarea{width: 100%}
 input{width: 100%}
 #gambar-post img{width: 100%;height: 150px;display: block;transition: all .3s ease-out!important;-webkit-transition: all .3s ease-out!important;-moz-transition: all .3s ease-out!important;-o-transition: all .3s ease-out!important;}
 #main{height: 100%}
-#post-utama, #sidebar{padding: 10px}
-#read-more:hover{background-color: blue}
-#read-more{border-radius: 0px;font-size: 13px;background-color: black;border:0px;}
+#post-utama{padding: 10px}
+#read-more:hover{background-color: #5EC662}
+#read-more{border-radius: 0px;font-size: 13px;background-color: black;border:0px;font-weight: bold;color: white}
 #row-post{padding-top: 15px}
 #row-single{padding-top: 15px}
 #single-main{padding: 5px}
+
+
+/* Mobile Responsive CSS */
+@media screen and (max-width: 600px) {p{text-align: justify;}
+/* Navbar */.topnav a:not(:first-child) {display: none;}.topnav a.icon {float: right;display: block;}.topnav.responsive {position: relative;}.topnav.responsive a.icon {position: absolute;right: 0;top: 0;}.topnav.responsive a {float: none;display: block;text-align: left}
+/* Main Posting */#col-main{margin-top: 10px}
+
+}

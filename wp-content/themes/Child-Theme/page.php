@@ -20,7 +20,4 @@
 
         </div><!-- /.blog-main -->
 
-        a
-
-
     <?php get_footer(); ?>

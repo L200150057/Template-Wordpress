@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>
       <?php bloginfo('name'); ?> |
       <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
@@ -15,30 +16,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-        <p class="lead blog-description"><?php bloginfo('description'); ?></p>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="nav-link active" href="/wordpress">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Documentation</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Example</a>
-            </li>
-          </ul>
+      <div class="row" id="header-row">
+        <div class="blog-header col-sm-4">
+          <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
+          <p class="lead blog-description"><?php bloginfo('description'); ?></p>
         </div>
-      </nav>
+        <div class="blog-header col-sm-8" id="banner">
+          <?php my_plugin_function() ?>
+          <img src="<?php echo get_option('url'); ?>">
+        </div>
+      </div>
+      <?php wp_get_nav_menu_items('home') ?>
+      <div class="topnav" id="myTopnav">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="active">HOME</a>
+        <a href="#news">NEWS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div> 
     </div>
 
     <div class="container" id="main">

@@ -14,11 +14,16 @@ Text Domain: techguymedia
  */
 
 body {
+  background: #e0e5e8 url() repeat fixed top left;
+  background-size: 100% 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 
 a, a:hover{text-decoration: none;}
+
+a{color: black}
+a:hover{color: #2DBC32;transition: color 300ms ease-out;}
 
 h1, .h1,
 h2, .h2,
@@ -30,6 +35,12 @@ h6, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
+}
+
+.widgettitle:before{
+    content: "\f101";
+    font-family: FontAwesome;
+    margin-right: 5px;
 }
 
 /*
@@ -103,9 +114,10 @@ h6, .h6 {
 .blog-main {
   margin: 0px;
   padding: 15px;
-  font-size: 12px;
-  line-height: 26px;
   box-sizing: border-box;
+  font-size: 14px;
+  line-height: 23px;
+  color: black;
 }
 
 /* Sidebar modules for boxing content */
@@ -165,7 +177,7 @@ h6, .h6 {
  */
 
 .blog-footer {
-  padding: 40px 0;
+  padding: 5px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
@@ -232,7 +244,7 @@ h6, .h6 {
 
  /* CSS Comment Start */
 
- .comments{padding-top: 25px;}
+ .comments{margin-top: 25px;}
 
  .comment-body, .comment-respond{
   padding: 15px 35px;

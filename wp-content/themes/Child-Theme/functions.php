@@ -31,35 +31,8 @@ function wpb_init_widgets($id){
     'id'    => 'sidebar',
     'before_widget' => '<div class="sidebar-module">',
     'after_widget'  => '</div>',
-    'before_title'  => '<h4>',
-    'after_title'   => '<hr/></h4>'
-  ));
-
-  register_sidebar(array(
-    'name'  => 'Box1',
-    'id'    => 'box1',
-    'before_widget' => '<div class="box">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ));
-
-  register_sidebar(array(
-    'name'  => 'Box2',
-    'id'    => 'box2',
-    'before_widget' => '<div class="box">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ));
-
-  register_sidebar(array(
-    'name'  => 'Box3',
-    'id'    => 'box3',
-    'before_widget' => '<div class="box">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'before_title'  => '<div class="header-widget">',
+    'after_title'   => '<hr/></div>'
   ));
 }
 
@@ -78,3 +51,37 @@ function bootstrap_autoload() {
     wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-3.2.1.slim.min.js');
 }
 add_action('wp_enqueue_scripts', 'bootstrap_autoload');
+
+add_action('admin_menu', 'my_plugin_menu');
+
+function my_plugin_menu() {
+  add_dashboard_page('Setting', 'Setting Theme', 'read', 'my-unique-identifier', 'my_plugin_function');
+}
+
+function my_plugin_function(){
+
+  if (isset($_POST['submit'])){
+    $url = "url";
+    $url_save = $_POST['url'];
+    update_option($url, $url_save);    
+  }
+
+  if (is_admin()){
+    echo '
+    <div class="wrap">
+      <div class="postbox">
+        <h2 class="hndle"><span>Change Header-Image</span></h2>
+        <div class="inside">
+          <div class="main">
+          <form method="post" id="frm" name="frm">
+            Header-Image : <input type="url" placeholder="Masukan Url Gambar" id="url" value="'.get_option('url').'" name="url"/>          
+            <input class="button button-primary" type="submit" name="submit" />
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    ';
+  }
+    
+}
